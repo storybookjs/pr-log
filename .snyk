@@ -1,0 +1,13 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:qs:20170213':
+    - restling > restler > qs:
+        reason: None given
+        expires: '2017-08-27T14:07:19.539Z'
+  'npm:shelljs:20140723':
+    - git-promise > shelljs:
+        reason: None given
+        expires: '2017-08-27T14:07:19.540Z'
+patch: {}
