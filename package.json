@@ -8,8 +8,9 @@
         "pretest": "eslint .",
         "test": "nyc npm run test:unit",
         "prepublish": "npm run build",
-        "test:unit": "mocha test",
-        "coveralls": "cat ./build/coverage/lcov.info | coveralls"
+        "test:unit": "mocha --compilers js:babel-core/register test",
+        "coveralls": "cat ./build/coverage/lcov.info | coveralls",
+        "preinstall": "npm run build"
     },
     "author": "Mathias Schreck <schreck.mathias@gmail.com>",
     "license": "MIT",
@@ -57,7 +58,9 @@
         "cache": false,
         "all": true,
         "check-coverage": true,
-        "require": [ "babel-register" ],
+        "require": [
+            "babel-register"
+        ],
         "sourceMap": true,
         "instrumment": false,
         "report-dir": "./build/coverage"
